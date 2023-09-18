@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://e7nk5fa72pjd"]
+
+[ext_resource type="Script" path="res://scenes/Field.cs" id="1_00v7q"]
+[ext_resource type="Texture2D" uid="uid://dy7latn325lnv" path="res://assets/field.png" id="1_70ytw"]
+[ext_resource type="Resource" uid="uid://c2cv313ifr40p" path="res://resources/FieldResource.tres" id="2_31q4f"]
+[ext_resource type="Texture2D" uid="uid://cf1ttdqp6r3yf" path="res://assets/flag.png" id="2_jjlt2"]
+[ext_resource type="Texture2D" uid="uid://bexj6rr6x45h7" path="res://assets/explosion.png" id="5_hye3o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t6pvf"]
+size = Vector2(16, 16)
+
+[node name="Field" type="Node2D"]
+script = ExtResource("1_00v7q")
+FieldResource = ExtResource("2_31q4f")
+
+[node name="NumberSprite" type="Sprite2D" parent="."]
+position = Vector2(8, 8)
+
+[node name="HiddenSprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_70ytw")
+offset = Vector2(8, 8)
+
+[node name="FlagSprite" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(8, 8)
+texture = ExtResource("2_jjlt2")
+
+[node name="ExplosionSprite" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(8, 8)
+texture = ExtResource("5_hye3o")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_t6pvf")

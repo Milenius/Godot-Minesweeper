@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8pidsg3ujm8d"]
+
+[ext_resource type="Texture2D" uid="uid://co3khseord5nc" path="res://assets/field_background.png" id="1_r25x6"]
+[ext_resource type="Script" path="res://scenes/Main.cs" id="1_wx54t"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_wx54t")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+offset_right = 64.0
+offset_bottom = 64.0
+texture = ExtResource("1_r25x6")
+region_rect = Rect2(0, 0, 16, 16)
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
